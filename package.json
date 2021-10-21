@@ -1,0 +1,16 @@
+{
+  "name": "pokeapi-types",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gentypes": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "directory-tree": "^3.0.0",
+    "json-schema-to-typescript": "^10.1.5"
+  }
+}
