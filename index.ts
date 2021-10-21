@@ -220,8 +220,5 @@ for (const [method, path] of rootEndpoints) {
   });
 }
 
-// Export the class
-pokeApiClass.setIsExported(true);
-
 // Write the file
 await file.save();
