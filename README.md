@@ -4,5 +4,5 @@ This repository contains a basic generator that converts the JSON schemas found 
 
 # TODO
 
-- [ ] Include the `pokedex-promise-v2` methods in the `types.d.ts`
+- [x] Include the `pokedex-promise-v2` methods in the `types.d.ts`
 - [ ] Make the generator pick the schemas from the repository
