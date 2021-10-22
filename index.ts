@@ -173,6 +173,27 @@ pokeApiClass.addMethod({
   returnType: 'Promise<unknown[]>',
 });
 
+// Add the get generic resource array method
+pokeApiClass.addMethod({
+  name: 'resource',
+  parameters: [{
+    name: 'paths',
+    type: 'string[]',
+  }],
+  returnType: 'Promise<unknown[]>',
+});
+
+// Add the get generic resource method, with support for typing
+pokeApiClass.addMethod({
+  name: 'resource',
+  typeParameters: ['T'],
+  parameters: [{
+    name: 'path',
+    type: 'APIResourceURL<T>',
+  }],
+  returnType: 'Promise<T>',
+});
+
 // Add all the methods from the endpoints list, 
 // setting the parameters typing and binding to the correct interface
 for (const [method, apiName] of endpoints) {
