@@ -20,8 +20,7 @@
     ],
   },
   "include": [
-    "index.ts",
-    "test/index.ts",
+    "**/*.ts",
   ],
   "exclude": [
     "node_modules"
