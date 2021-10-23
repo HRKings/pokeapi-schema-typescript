@@ -18,7 +18,7 @@
         },
         "results": {
             "items": {
-                "$ref": "./api_resource.json"
+                "$ref": "schema/v2/api_resource.json"
             },
             "type": "array"
         }
