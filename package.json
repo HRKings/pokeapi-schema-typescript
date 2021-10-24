@@ -7,6 +7,7 @@
   "types": "types.d.ts",
   "scripts": {
     "gentypes": "tsc; node dist/index.js",
+    "addjsdocs": "tsc; node dist/AddJSDocs.js",
     "test": "tsc; node dist/test/index.js"
   },
   "author": "",
@@ -16,7 +17,8 @@
     "lodash": "^4.17.21",
     "pokedex-promise-v2": "github:HRKings/pokedex-promise-v2",
     "quicktype-core": "^6.0.70",
-    "ts-morph": "^12.0.0"
+    "ts-morph": "^12.0.0",
+    "node-fetch": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^16.11.2"

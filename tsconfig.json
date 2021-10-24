@@ -9,6 +9,8 @@
     "allowSyntheticDefaultImports": true,
     "lib": [
       "esnext",
+      "dom",
+      "dom.iterable"
     ],
     "outDir": "dist"
   },
