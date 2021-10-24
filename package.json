@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "type": "module",
   "description": "",
-  "main": "index.js",
+  "main": "dist/src/index.js",
   "types": "types.d.ts",
   "scripts": {
-    "gentypes": "tsc; node index.js",
-    "test": "tsc; node test/index.js"
+    "gentypes": "tsc; node dist/index.js",
+    "test": "tsc; node dist/test/index.js"
   },
   "author": "",
   "license": "ISC",

@@ -1,16 +1,13 @@
-import { quicktype, InputData, JSONSchemaInput, FetchingJSONSchemaStore } from 'quicktype-core';
+import fs from 'fs';
+import path from 'path';
 import directoryTree from 'directory-tree';
 import { Project, Writers } from 'ts-morph';
-import fs from 'fs';
+import { quicktype, InputData, JSONSchemaInput, FetchingJSONSchemaStore } from 'quicktype-core';
 
 import endpoints from 'pokedex-promise-v2/src/endpoints.js';
 import rootEndpoints from 'pokedex-promise-v2/src/rootEndpoints.js';
-import path from 'path';
 
-// Paths that will be used
-const typeFile = './types/index.d.ts';
-const schemaFolder = './schema/v2';
-const timerLabel = 'Generator';
+import { schemaFolder, timerLabel, typeFile } from './utils.js';
 
 // Helper functions to interface names
 function toPascalCase(text: string) {
@@ -33,7 +30,7 @@ const schemaInput = new JSONSchemaInput(new FetchingJSONSchemaStore());
 const inputData = new InputData();
 
 // Gets schema file and adds it to schema source, outputs file at end
-async function quicktypeMain(jsonSchema, basename) {
+async function quicktypeMain(jsonSchema: string, basename: string) {
   // Add a single schema file to the schemaInput
   await schemaInput.addSource({ name: basename, schema: jsonSchema });
 

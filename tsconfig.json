@@ -9,11 +9,12 @@
     "allowSyntheticDefaultImports": true,
     "lib": [
       "esnext",
-      "dom"
     ],
+    "outDir": "dist"
   },
   "include": [
-    "**/*.ts",
+    "src/**/*.ts",
+    "types/**/*.d.ts"
   ],
   "exclude": [
     "node_modules"
